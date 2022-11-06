@@ -1,13 +1,223 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 600px;
+  width: 100vw;
+  margin: 0 auto;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  /* max-width: 600px; */
+  width: 90%;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  /* gap: 1rem; */
+}
+nav a {
+  text-decoration: none;
+  box-shadow: 0px 0px 5px gray;
+  background: black;
+  padding: 0.3rem;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 500ms ease-in-out;
+}
+nav a:hover {
+  background: rgb(13, 104, 156);
+}
+.app-container {
+  max-width: 600px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 2rem auto;
+  background: white;
+}
+
+.app {
+  width: 90%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.hook-container {
+  margin-top: 4rem;
+}
+.heading {
+  margin: 1.5rem auto 1rem;
+  text-align: center;
+}
+
+input {
+  width: 90%;
+  display: block;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+  margin: 2rem auto;
+  box-shadow: 0px 2px 10px black;
+}
+input[value] {
+  font-size: 2rem;
+  font-weight: bold;
+}
+input::placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+}
+h2 {
+  font-size: 5rem;
+  font-weight: bolder;
+  text-align: center;
+}
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  /* gap: 1rem; */
+}
+.btn {
+  /* display: inline-block; */
+  border: none;
+  outline: none;
+  border-radius: 40%;
+  background: steelblue;
+  color: white;
+  box-shadow: 0px 3px 15px black;
+  margin: 1rem;
+  padding: 0.5rem;
+  transition: all ease-in-out 500ms;
+}
+/* .btn:hover {
+  color: steelblue;
+  background: white;
+} */
+
+.btn:nth-child(1):hover {
+  background: orange;
+}
+.btn:nth-child(2):hover {
+  background: red;
+}
+.btn:nth-child(3):hover {
+  background: green;
+}
+/* button styling */
+
+.negative {
+  color: red;
+  animation: button-style 500ms ease-in-out;
+}
+
+.positive {
+  color: green;
+  animation: button-style 500ms ease-in-out;
+}
+
+@keyframes button-style {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+/* footer */
+footer {
+  color: black;
+  display: block;
+  width: 90%;
+  /* background: red; */
+  text-align: center;
+  margin: 0 auto;
+}
+.footer-flex {
+  display: flex;
+
+  text-align: center;
+}
+.footer-flex > span {
+  margin-right: 1rem;
+  /* text-align: center; */
+}
+span:first-child {
+  margin-left: 1rem;
+}
+
+.home {
+  margin: 2rem auto;
+}
+.home > h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* NotFound */
+.not-found {
+  background: white;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+.not-found > h2 {
+  color: red;
+}
+.not-found > h4 {
+  text-align: center;
+}
+.not-found > button {
+  width: 70%;
+  display: block;
+  margin: 1rem auto 0;
+  background: rgb(128, 83, 83);
+  border: none;
+  border-radius: 40px;
+  box-sizing: border-box;
+  padding: 0.5rem 0;
+  transition: all ease-in-out 500ms;
+}
+.not-found > button:hover {
+  color: rgb(128, 83, 83);
+  background: black;
+}
+.not-found > button a {
+  text-decoration: none;
+  color: white;
+}
+/* Image */
+.img {
+  margin: 1rem auto;
+}
+.img img {
+  width: 90%;
+  /* height: 200px; */
+  height: 300px;
 }
